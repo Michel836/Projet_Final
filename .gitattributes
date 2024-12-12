@@ -1,1 +1,2 @@
 *.csv filter=lfs diff=lfs merge=lfs -text
+notebooks/saved_model/model.safetensors filter=lfs diff=lfs merge=lfs -text
