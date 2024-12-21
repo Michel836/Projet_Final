@@ -1,0 +1,34 @@
+<header style="background-color:rgba(135, 148, 16, 0.342);text-align:center;justify-content:center;width:100%;height:50px;">
+    <h1>Fake News Detector</h1>
+</header>
+<div style="margin:10px">
+<div style="margin-left:2%">
+<p style="margin-right:5%;text-align:justify;">
+    Ce site est un détecteur de Fake News. 
+    Il fonctionne à partir d'une API de machine learning développée en Python.<br/>
+
+    Nous avons choisi d'utiliser un modèle de Logisitc Regression. 
+    Ce modèle a été implémenté, entraîné et testé auparavant avant qu'il soit le plus performant possible.<br/>
+    
+    Attention, ce site ne fonctionne pour le moment que pour les sites en anglais. 
+    Nous préparons actuellement le modèle pour les sites en français.<br/>
+
+    Fonctionnement : 
+    Vous copiez l'URL d'un article d'un des sites autorisés puis ovus la collez dans le formulaire ci dessous.
+    Cela la transmettra à notre API qui vous indiquera si cet article est une Fake News ou non.
+</p>
+
+
+    Entrez l'URL <br/>
+    <input type="text" style="width:50%;" [(ngModel)]="url" [ngModelOptions]="{standalone: true}"/>
+    <br/>
+    <button (click)="IsFakeNewsUrl()">Send URL</button>
+    <br/>
+    <input type="textarea" style="height:300px;width:50%;margin-top:5px;margin-bottom:5px;" placeholder="Test if article is a fake news" [(ngModel)]="article" [ngModelOptions]="{standalone: true}">
+    <br/>
+    <button (click)="IsFakeNewsArticle()">Send Article</button>
+
+
+<p>Is Fake News ? : {{isFakeNews}}
+</div>
+</div>
